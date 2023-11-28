@@ -1,0 +1,542 @@
+/**
+ *
+ * All SCSS styles related to the contact page
+ *
+ */
+
+/**
+ *
+ * SBX Contact Form 1 styled from scratch with Flexbox and CSS columns.
+ *
+*/
+
+.contact-wrap {
+    margin-top: 1.4rem;
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include sbx-media-min(md) {
+            width: 46%;
+        }
+
+		a {
+			&:hover {
+				color: $secondary;
+			}
+		}
+
+        &:nth-child(n+2) {
+            margin-top: 2rem;
+
+            @include sbx-media-min(md) {
+                margin-top: 1rem;
+            }
+        }
+
+        &:nth-child(n+3) {
+            margin-top: 2rem;
+
+            @include sbx-media-min(md) {
+                margin-top: 2.5rem;
+            }
+        }
+
+        p, a {
+			width: fit-content;
+			display: inline-block;
+            font-size: 1rem;
+			font-weight: 800;
+			color: rgba($dark, 0.7);
+            letter-spacing: 0.03rem;
+			//text-decoration: underline;
+        }
+
+        & > span {
+            font-size: 1.3rem;
+            font-family: $font-heading;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.03rem;
+            color: $secondary;
+
+            i {
+                font-size: 1.4rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+}
+
+
+.sbx-contact-form-1 {
+    padding: 1rem !important;
+    border-radius: $radius-reg !important;
+    background-color: white !important;
+	border: 1px solid rgba($dark, 0.1) !important;
+
+    @include sbx-media-min(md) {
+        padding: 1.5rem 2rem 2rem !important;
+    }
+	// Style confirmation message
+	.wpforms-confirmation-container {
+		margin: 2rem 0;
+		padding: 0.125rem 0.75rem;
+		text-align: center;
+	}
+
+	// Style contact form
+	form {
+
+		.wpforms-field-container {
+			// Form layout
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 0;
+			text-align: left;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				li {
+					display: inline-block;
+					padding: 0.25rem 2rem 0.25rem 0;
+				}
+			}
+
+			.sbx-form-control,
+			.sbx-checkbox-container,
+			.sbx-radio-container {
+				width: 100%;
+				margin: 0.2rem 0;
+
+                @include sbx-media-min(md) {
+                    width: 100%;
+                }
+
+                &.full {
+                    width: 100%;
+                }
+
+				input,
+				textarea {
+					width: 100%;
+				}
+
+				&.sbx-form-control-half {
+					@include sbx-media-min(md) {
+						width: 49%;
+					}
+				}
+
+				&.sbx-form-control-one-third {
+					@include sbx-media-min(md) {
+						width: 31.5%;
+					}
+				}
+
+                label {
+                    font-size: 0.9rem;
+                    letter-spacing: 0.03rem;
+                    color: $text-dark;
+                    margin-bottom: 0.4rem;
+                }
+
+			}
+
+			// Custom checkboxes
+			.sbx-checkbox-container ul li {
+				label {
+                    font-size: 1rem;
+					position: relative;
+					min-height: 2rem;
+					display: block;
+					padding-left: 2rem;
+					margin-bottom: 0;
+					cursor: pointer;
+					line-height: 1.75rem;
+                    letter-spacing: 0.02rem;
+                    color: $secondary !important;
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						margin: 5px;
+						width: 18px;
+						height: 18px;
+						transition: transform 0.28s ease;
+						border: 1px solid lighten($text-dark, 50%);
+					}
+					&:after {
+						content: "";
+						display: block;
+						width: 10px;
+						height: 5px;
+						border-bottom: 2px solid $primary;
+						border-left: 2px solid $primary;
+						transform: rotate(-45deg) scale(0);
+						transition: transform ease 0.25s;
+						position: absolute;
+						top: 11px;
+						left: 9px;
+					}
+				}
+				input[type="checkbox"] {
+					width: auto;
+					opacity: 0.00000001;
+					position: absolute;
+					left: 0;
+					margin-left: -20px;
+					&:checked ~ label {
+						&:before {
+							border: 1px solid lighten($text-dark, 50%);
+						}
+						&:after {
+							transform: rotate(-45deg) scale(1);
+						}
+					}
+					&:focus + label::before {
+						outline: 0;
+					}
+				}
+				input[type="radio"] {
+					width: auto;
+					opacity: 0.00000001;
+					position: absolute;
+					left: 0;
+					margin-left: -20px;
+					&:checked ~ label {
+						&:before {
+							border: 1px solid lighten($text-dark, 50%);
+						}
+						&:after {
+							transform: rotate(-45deg) scale(1);
+						}
+					}
+					&:focus + label::before {
+						outline: 0;
+					}
+				}
+			}
+
+			// Custom Radio
+			.sbx-radio-container ul li {
+				[type="radio"]:checked,
+				[type="radio"]:not(:checked) {
+					position: absolute;
+					left: -9999px;
+				}
+				[type="radio"]:checked + label,
+				[type="radio"]:not(:checked) + label {
+					position: relative;
+					padding-left: 28px;
+					cursor: pointer;
+					line-height: 20px;
+					display: inline-block;
+					color: lighten($text-dark, 50%);
+				}
+				[type="radio"]:checked + label:before,
+				[type="radio"]:not(:checked) + label:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid lighten($dark, 50%);
+					border-radius: 100%;
+					background: $white;
+				}
+				[type="radio"]:checked + label:before {
+					border: 1px solid $primary;
+				}
+				[type="radio"]:checked + label:after,
+				[type="radio"]:not(:checked) + label:after {
+					content: "";
+					width: 12px;
+					height: 12px;
+					background: $primary;
+					position: absolute;
+					top: 3px;
+					left: 3px;
+					border-radius: 100%;
+					-webkit-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+				}
+				[type="radio"]:not(:checked) + label:after {
+					opacity: 0;
+					-webkit-transform: scale(0);
+					transform: scale(0);
+				}
+				[type="radio"]:checked + label:after {
+					opacity: 1;
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			// Form theme
+			.sbx-form-control {
+				// Input, textarea and select styles
+
+				input,
+				textarea,
+				&.sbx-select-container .choices__inner {
+					background-color: rgba($primary, 0.1);
+					border: 0 dashed rgba($dark, 0.1) !important;
+                    outline: none;
+					color: $dark;
+					border-radius: $radius-sm !important;
+					padding: 15px !important;
+					font-size: 1rem;
+
+					&::placeholder {
+						color: $muted !important;
+						font-weight: $font-light;
+						font-size: 0.875rem;
+						//text-transform: uppercase;
+						letter-spacing: 0.05rem;
+					}
+
+                    &:focus,
+                    &:active {
+                        border: 1px solid $primary-light !important;
+                        outline: none;
+                    }
+				}
+
+				// Match height of input and text area
+				&.sbx-select-container .choices__inner {
+					padding: 11px;
+				}
+
+				textarea {
+					height: 180px;
+                    //background-color: $white;
+				}
+
+				// Required indicators
+				.wpforms-field-label {
+					.wpforms-required-label {
+						color: red;
+					}
+				}
+
+				// Style error messages in form control
+				.wpforms-error {
+					color: $danger;
+					font-size: 0.875rem;
+					font-style: italic;
+				}
+			}
+
+			// Reset WP Forms default select typography styling
+			.sbx-select-container {
+
+				.choices__inner {
+					background-color: rgba($primary, 0.1) !important;
+
+					.choices__list--single {
+						background-color: transparent !important;
+					}
+				}
+
+				.choices__input {
+
+					.placeholder {
+						color: $muted !important;
+						font-weight: $font-light !important;
+						font-size: 0.875rem !important;
+						//text-transform: uppercase;
+						letter-spacing: 0.05rem !important;
+					}
+				}
+
+				.choices__list {
+					opacity: 1 !important;
+					background-color: none !important;
+					font-weight: normal;
+					font-size: 1rem;
+					& .choices__placeholder {
+						opacity: 1 !important;
+						color: lighten($dark, 50%);
+					}
+				}	
+
+			} 
+			// Styling for legal text
+			.sbx-legal-text,
+            .wpforms-field-description {
+				font-size: 0.9rem !important;
+                line-height: 1.6 !important;
+				font-weight: 400;
+				color: $dark;
+
+				// Style error messages in legal text
+				.wpforms-error {
+					color: $danger;
+					font-size: 0.875rem;
+					font-style: italic;
+				}
+			}
+
+			// Styling for field limit text
+			.wpforms-field-limit-text {
+				@extend .sbx-legal-text;
+			}
+		}
+
+		// Align submit button
+		.wpforms-submit-container {
+			display: flex;
+			justify-content: center;
+
+            // Submit button (Inherit theme styles)
+            .sbx-contact-form-btn {
+                // margin: 1.5rem 0.5rem;
+                width: 100%;
+                font-family: $font-heading;
+                outline: none !important;
+                border: none !important;
+                border-radius: 0.5rem;
+                letter-spacing: 0.05rem;
+                transition: all $transition-normal;
+                background-color: $primary !important;
+                color: $white !important;
+
+                &:hover {
+                    background-color: $secondary !important;
+                }
+            }
+		}
+
+		// Hide WP Forms functional element
+		.wpforms-field.wpforms-field-hp {
+			display: none;
+		}
+
+		// Using a checkbox field as custom text field
+		.sbx-checkbox-replace ul {
+			display: none;
+		}
+
+		// Hide required asterisk for surname field
+		// #wpforms-175-field_12-container .wpforms-required-label {
+		// 	visibility: hidden;
+		// }
+
+		// Hide labels
+		label.wpforms-field-label,
+		.wpforms-field-label.wpforms-label-hide {
+			//display: none;
+		}
+
+	}
+
+}
+
+.wpforms-container {
+	margin: 0 !important;
+
+	.wpforms-field {
+		padding: 10px 0 !important;
+	}
+} 
+
+.map {
+    width: 100%;
+    height: 30vh;
+    min-height: 20rem;
+    border-radius: $radius-sm;
+	border: 1px solid rgba($dark, 0.2) !important;
+
+    @include sbx-media-min(md) {
+        height: 30vh;
+    }
+}
+
+.forminator-custom-form {
+
+    .i-form-control {
+
+        .forminator-label {
+            letter-spacing: 0.03rem;
+            font-weight: 400 !important;
+            color: $secondary-dark !important;
+        }
+        &.select-container {
+
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem 1rem !important;
+            box-shadow: none !important;
+            background-color: rgba($primary, 0.1) !important;
+            border-radius: $radius-sm !important;
+            border: 1px solid rgba($primary, 0.1) !important;
+
+            &:hover,
+            &:focus {
+				background-color: rgba($primary, 0.1) !important;
+				border: 1px solid rgba($primary, 0.4) !important;
+            }
+        }
+    }
+
+    .forminator-field {
+
+        span.select2 .select2-selection {
+            padding: 0.9rem 1rem !important;
+            border-radius: 1rem !important;
+            border: 1px solid $text-neutral !important;
+            background-color: $lighter !important;
+        }
+    }
+
+    .forminator-button-submit {
+		font-size: 1.2rem;
+        box-shadow: none !important;
+        border-radius: 0.7rem !important;
+
+        &:hover {
+            background-color: $secondary !important;
+        }
+    }
+
+    .forminator-multi-upload {
+        border-radius: 1rem !important;
+    }
+
+    .forminator-row {
+        margin-bottom: 1.2rem !important;
+
+        @include sbx-media-min(md) {
+            margin-bottom: 1rem !important;
+        }
+
+        .forminator-col {
+            margin-top: 1.2rem !important;
+
+            @include sbx-media-min(md) {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    .forminator-select.forminator-select-dropdown-container--open .forminator-select-dropdown.forminator-dropdown--flat{
+        //overflow: hidden !important;
+        border-radius: 1rem !important;
+        background-color: $white !important;
+    }
+}

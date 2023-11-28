@@ -1,0 +1,103 @@
+// Name:            typography.scss
+// Description:     Styles related to text, paragraphs,
+//                  fonts etc. are stored here
+//
+// -----------------------------------------------
+
+// Headings
+
+h1,
+.h1 {
+	font-family: $font-heading;
+	font-size: 2.5rem;
+	line-height: 1.286;
+	@include sbx-media-min(sm) {
+		font-size: 3.5rem;
+	}
+}
+
+h2,
+.h2 {
+	font-family: $font-heading;
+	font-size: 2rem;
+	line-height: 1.275;
+	@include sbx-media-min(sm) {
+		font-size: 2.5rem;
+	}
+}
+
+h3,
+.h3 {
+	font-family: $font-heading;
+	font-size: 1.375rem;
+	line-height: 1.25;
+	@include sbx-media-min(sm) {
+		font-size: 1.5rem;
+	}
+}
+
+h4,
+.h4 {
+	font-family: $font-primary;
+	font-weight: $font-bold;
+	font-size: 1rem;
+	line-height: 1.2;
+	@include sbx-media-min(sm) {
+		font-size: 1.25rem;
+	}
+}
+
+// Default Styles for all user-editable WYSIWYG content
+
+.wysiwyg {
+	line-height: inherit;
+
+	h1 {
+		color: $primary;
+	}
+
+	blockquote {
+		color: $primary;
+		font-style: normal;
+	}
+
+	p {
+		overflow-wrap: break-word;
+	}
+
+	ul li {
+		margin: 0.25rem 0.5rem;
+		list-style: none;
+
+		&:before {
+			content: "\25C6";
+			font-size: 1rem;
+			color: $primary;
+			vertical-align: -0.05rem;
+			margin: 0 1rem 0 -2rem;
+			line-height: inherit;
+		}
+	}
+
+	a {
+		color: $primary;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $primary;
+		}
+	}
+
+	& > * {
+		margin-bottom: 1.5rem;
+	}
+
+	img,
+	figure,
+	video {
+		max-width: 100%;
+		height: auto;
+		// border-radius: $border-radius;
+	}
+}

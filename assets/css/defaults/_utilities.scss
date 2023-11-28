@@ -1,0 +1,188 @@
+/**
+ *
+ * Custom SBX utilities. Overrides Bootstrap.
+ *
+*/
+
+/*=============================================
+=            Containers            =
+=============================================*/
+.container-lg {
+	@include make-container;
+	max-width: $lg;
+}
+
+.container-md {
+	@include make-container;
+	max-width: $md;
+}
+
+.container-sm {
+	@include make-container;
+	max-width: $sm;
+}
+
+.contained-text {
+	display: block;
+	max-width: 450px;
+}
+
+/*=====  End of Containers  ======*/
+
+// -----------------------------------------------
+// Font Awesome icons using Pseudo-elements
+// -----------------------------------------------
+// Please use this method only if you can't control the final markup of the site
+// @link https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/css-pseudo-elements
+
+.fa-custom::before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+// -----------------------------------------------
+// Animation Utilities
+// -----------------------------------------------
+
+.gs__reveal {
+	opacity: 0;
+	visibility: hidden;
+	will-change: transform, opacity;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(#000, 0.4);
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.hero__support {
+    text-align: center;
+    padding: 2.5rem 0;
+    background-color: $primary-dark;
+    color: $white;
+
+    @include sbx-media-min(md) {
+        padding: 2.5rem 0;
+        text-align: left;
+    }
+
+    .sec-hdr {
+        position: relative;
+        padding-top: 1rem;
+        color: $secondary-light;
+        margin-bottom: 1rem;
+
+        @include sbx-media-min(md) {
+            padding-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 10%;
+            height: 3px;
+            position: absolute;
+            transform: translateX(-50%);
+            background-color: $primary;
+            left: 50%;
+            top: 0;
+
+            @include sbx-media-min(md) {
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+
+    .sec-text {
+        color: $lighter;
+    }
+}
+
+//Animation Features
+.in-view.fadeInLeft {
+    animation: fadeInLeft 2s ease-in-out forwards;
+}
+.in-view.xFlipLeft {
+    animation: xFlipLeft 2s ease-in-out forwards;
+}
+.in-view.xFlipRight {
+    animation: xFlipRight 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes icon-scroll {
+	0%,
+	15%{top:.375rem;height:.5rem}
+	33%{top:.375rem;height:1.125rem}
+	66%,
+	81%{top:1.0625rem;height:.5rem}
+	100%{top:.375rem;height:.5rem}
+}
+
+@keyframes icon-scroll{
+	0%,
+	15%{top:.375rem;height:.5rem}
+	33%{top:.375rem;height:1.125rem}
+	66%,
+	81%{top:1.0625rem;height:.5rem}
+	100%{top:.375rem;height:.5rem}
+}
+
+@keyframes fadeInLeft {
+	0% { opacity: 0; transform: translate3d(20%, 0, 0); }
+	100% { opacity: 1; transform: none; }
+}
+@keyframes fadeOutLeft {
+	0% { opacity: 1; }
+	100% { opacity: 0; transform: translate3d(20%, 0, 0); }
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	10% {
+		transform: translateY(13px);
+	}
+    20% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes xFlipLeft {
+	from   { 
+        opacity: 0; 
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); 
+    }
+	to { 
+        opacity: 1; 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); 
+    }
+}
+
+@keyframes xFlipRight {
+	from   { 
+        opacity: 0; 
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); 
+    }
+	to { 
+        opacity: 1; 
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); 
+    }
+}
+
+@keyframes scrolling {
+	0% {transform: translateX(80vw);}
+	100% {transform: translateX(-190vw);}
+}

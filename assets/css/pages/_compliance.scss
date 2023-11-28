@@ -1,0 +1,55 @@
+/**
+ *
+ * Compliance page styles
+ *
+*/
+
+.compliances-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    //align-items: flex-start;
+    justify-content: center;
+
+    .single-article {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0.7rem;
+        border-radius: $radius-lg;
+        border: 1px solid $secondary-light;
+
+        @include sbx-media-min(md) {
+            width: 30%;
+            margin: 1rem 0.7rem;
+        }
+
+        @include sbx-media-min(lg) {
+            width: 22%;
+            margin: 1rem 0.7rem;
+        }
+
+        .compliance {
+            display: flex;
+            padding: 1.2rem 4%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include sbx-media-min(md) {
+                padding: 1.5rem 5%;
+            }
+
+            .sec-text {
+                font-size: 0.85rem;
+            }
+
+            img {
+                width: auto;
+                height: 4.5rem;
+
+                @include sbx-media-min(md) {
+                    height: 6rem;
+                }
+            }
+        }
+    }
+}

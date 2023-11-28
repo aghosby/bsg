@@ -1,0 +1,303 @@
+/**
+ * Forms
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+button,
+input {
+	overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+	text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+  * Restore the focus styles unset by the previous rule.
+  */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+  * Correct the padding in Firefox.
+  */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+  * 1. Correct the text wrapping in Edge and IE.
+  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 3. Remove the padding so developers are not caught out when they zero out
+  *		`fieldset` elements in all browsers.
+  */
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+textarea {
+	overflow: auto;
+}
+
+/**
+  * 1. Add the correct box sizing in IE 10.
+  * 2. Remove the padding in IE 10.
+  */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+  * 1. Correct the inability to style clickable types in iOS and Safari.
+  * 2. Change font properties to `inherit` in Safari.
+  */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+// Form styles (Forminator)
+
+.forminator-custom-form {
+	font-family: $font-primary !important;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+	}
+
+	.forminator-field {
+		label,
+		.forminator-label {
+			font-family: $font-primary !important;
+			font-size: 0.85rem !important;
+			color: $dark !important;
+			margin-top: 0.5rem !important;
+			padding-left: 0.1rem !important;
+
+			.forminator-required {
+				color: $dark !important;
+			}
+		}
+
+		input,
+		textarea {
+			font-family: $font-primary !important;
+			padding: 0.5rem 1rem 1rem 0.1rem !important;
+			font-size: 1rem !important;
+			color: $dark !important;
+			background-color: transparent !important;
+			border-bottom: 1px solid $secondary !important;
+
+			&:hover,
+			&:focus {
+				background-color: transparent !important;
+			}
+		}
+
+		input[type="checkbox"]:checked ~ span.forminator-checkbox-box {
+			&::before {
+				color: $primary !important;
+			}
+		}
+
+		input[type="radio"]:checked ~ span.forminator-radio-bullet {
+			&::before {
+				background-color: $primary !important;
+			}
+		}
+
+		span.select2 {
+			.select2-selection {
+				height: 2.855rem !important;
+				background-color: transparent !important;
+				border-bottom: 1px solid $secondary !important;
+
+				&__rendered {
+					font-family: $font-primary !important;
+					padding-left: 0.1rem !important;
+				}
+
+				&__placeholder {
+					color: $muted !important;
+				}
+
+				&__arrow {
+					color: $primary !important;
+				}
+			}
+		}
+	}
+
+	#upload-1 {
+		margin-bottom: 1.5rem !important;
+
+		.forminator-label {
+			margin: 1rem 0 !important;
+			color: $secondary-dark !important;
+			font-family: $font-heading !important;
+			font-weight: $font-bold !important;
+			font-size: 1rem !important;
+			@include sbx-media-min(md) {
+				font-size: 1.25rem !important;
+			}
+			@include sbx-media-min(lg) {
+				font-size: 1.33rem !important;
+			}
+		}
+
+		.forminator-multi-upload {
+			background-color: $lighter !important;
+
+			a {
+				color: $primary !important;
+			}
+
+			.forminator-icon-upload {
+				margin-bottom: 1.5rem !important;
+
+				&::before {
+					content: "" !important;
+					background: url("../img/pdf-icon.svg") no-repeat !important;
+					background-size: contain !important;
+					width: 2rem !important;
+					height: 2rem !important;
+				}
+			}
+		}
+	}
+
+	#group-1,
+	#group-2,
+	.forminator-checkbox-label {
+		font-size: 0.7rem !important;
+	}
+
+	.forminator-button-submit {
+		background-color: $primary !important;
+		border-color: $primary !important;
+		color: $white !important;
+		transition: all $transition-fast !important;
+		width: 100% !important;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: lighten($primary, 5%) !important;
+			border-color: lighten($primary, 5%) !important;
+			color: $white !important;
+		}
+
+		&:hover:after {
+			right: 9%;
+		}
+
+		&:after {
+			right: 11%;
+		}
+
+		@include sbx-media-min(md) {
+			min-width: 19.5rem !important;
+		}
+	}
+}
+
+// Application form
+.jobapplication1 {
+	padding: 2rem 0;
+
+	h3 {
+		color: $secondary;
+	}
+}
