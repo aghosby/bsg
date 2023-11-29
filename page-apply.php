@@ -31,8 +31,8 @@ get_header(); ?>
 
 <main id="primary" class="site-main">
 
-    <section class="careers bkg-light py-5">
-        <div class="container">
+    <section class="careers bkg-light py-lg-5 py-3">
+        <div class="pad-x">
 
             <div class="row justify-content-center">
                 <div class="col-lg-7">

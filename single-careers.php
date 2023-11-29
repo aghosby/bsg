@@ -34,7 +34,7 @@ get_header(); ?>
     </section>
 
     <section class="careers py-lg-5 py-3">
-        <div class="container">
+        <div class="pad-x">
 
             <div class="row justify-content-center">
 

@@ -53,7 +53,7 @@
 <!-- Mission Section -->
 <section class="mission-sec pad-x">
     <div class="row justify-content-center">
-        <div class="col-lg-7 mt-lg-1 mt-2">
+        <div class="col-lg-7 mt-lg-1 mt-0">
             <div class="sec-hdr primary md js-anime fadeInLeft"><?= get_field('mission_title'); ?></div>
             <div class="sec-text mt-lg-1 mt-1 js-anime fadeInLeft"><?= get_field('mission_text'); ?></div>
         </div>
@@ -61,7 +61,7 @@
 </section>
 
 <!-- Partner Section -->
-<div class="section pad-x col-lg-12 mt-lg-2 mt-2">
+<div class="section pad-x col-lg-12 mt-lg-2 mt-0">
     <div class="row justify-content-center">
         <div class="col-lg-7 mt-lg-1 mt-2">
             <div class="sec-hdr primary md js-anime fadeInLeft"><?= get_field('partner_title'); ?></div>
@@ -86,7 +86,7 @@
     <div class="mid-section abt">
         <div class="mid-section-image lg bkg-std js-anime xFlipRight" style="background-image: url('<?= get_field('mid_section_image')['url']; ?>')">
             <div class="overlay"></div>
-            <div class="col-6">
+            <div class="col-lg-6 col-12">
                 <div class="sec-hdr wht lg js-anime fadeInLeft"><?= get_field('mid_section_heading'); ?></div>
                 <div class="sec-text wht lg mt-lg-1 mt-1 js-anime fadeInLeft"><?= get_field('mid_section_preamble'); ?></div>
                 <?php if (get_field('mid_section_link')['url']) : ?>
@@ -108,12 +108,12 @@
         <div class="col-lg-6 pe-lg-4">
             <!-- <div class="sec-hdr sm primary js-anime fadeInLeft"><?= get_field('about_section_heading'); ?></div> -->
             <div class="sec-hdr lg js-anime fadeInLeft"><?= get_field('safety_heading'); ?></div>
-            <div class="sec-text js-anime fadeInLeft mt-lg-1">
+            <div class="sec-text js-anime fadeInLeft mt-lg-1 mt-1">
                 <?= get_field('safety_text_content'); ?>
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-lg-0 mt-2">
             <div class="sec-hdr sm js-anime fadeInLeft"><?= get_field('values_heading'); ?></div>
             <div class="values-wrap">
                 <?php while (have_rows('company_values')) : the_row(); ?>

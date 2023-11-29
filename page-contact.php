@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-lg-0 mt-3">
             <?= do_shortcode('[wpforms id="1132"]') ?>
         </div>
     </div>

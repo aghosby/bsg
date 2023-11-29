@@ -40,7 +40,7 @@ get_header(); ?>
 
     <!-- Details Section -->
     <section class="pad-x py-lg-5 py-3">
-        <div class="single-page container">
+        <div class="single-page">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="sec-hdr md primary"><?= the_title(); ?></div>

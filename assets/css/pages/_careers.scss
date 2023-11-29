@@ -59,7 +59,11 @@
     justify-content: space-between;
 
     .single-article {
-        width: 49%;
+        width: 100%;
+
+        @include sbx-media-min(md) {
+            width: 49%;
+        }
     }
 
     a {
@@ -85,11 +89,16 @@
         .header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             flex-wrap: wrap;
+
+            @include sbx-media-min(md) {
+                justify-content: unset;
+            }
 
             .sec-hdr {
                 width: 100%;
-                //margin-bottom: 0;
+                margin-bottom: 0.2rem;
 
                 @include sbx-media-min(md) {
                     width: auto;
@@ -112,7 +121,7 @@
 
             .action {
                 font-size: 0.85rem;
-                margin-left: auto;
+                //margin-left: auto;
                 color: $primary;
 
                 @include sbx-media-min(md) {

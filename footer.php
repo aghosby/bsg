@@ -14,7 +14,7 @@
 
 <footer id="colophon" class="footer site-footer bg-light">
 
-    <section class="footer pad-x py-3">
+    <section class="footer pad-x">
         <div class="footer-cont py-lg-2 py-2">
 
             <div class="row justify-content-between">
@@ -145,7 +145,7 @@
                         </div>
                     </form>
 
-                    <div class="social-wrap mt-lg-2">
+                    <div class="social-wrap mt-lg-2 mt-2">
                         <h3>Follow Us</h3>
                         <!-- Social icons -->
                         <?php get_template_part('template-parts/section', 'social-links'); ?>

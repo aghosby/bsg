@@ -348,14 +348,14 @@ h2,
 
 .sec-text, 
 .sec-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 400;
     letter-spacing: 0.02rem;
     color: rgba($text-dark, 0.8);
     margin-bottom: 0.6rem;
 
     @include sbx-media-min(md) {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     @include sbx-media-min(lg) {
@@ -421,10 +421,14 @@ h2,
     }
 
     h3 {
-        font-size: 1.8rem;
+        font-size: 1.45rem;
         font-family: $font-heading;
         line-height: 1.2;
         letter-spacing: 0.04rem;
+
+        @include sbx-media-min(md) {
+            font-size: 1.8rem;
+        }
     }
 
     h4 {

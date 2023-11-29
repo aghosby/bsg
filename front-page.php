@@ -75,17 +75,16 @@
     
 </section>
 
-
 <!-- About section -->
 <section class="about pad-x py-lg-5 bkg-light">
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6">
             <div class="section-image bkg-standard js-anime xFlipRight" style="background-image: url('<?= get_field('about_photo')['url']; ?>')"></div>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 mt-lg-0 mt-2">
             <div class="sec-hdr sm primary js-anime fadeInLeft"><?= get_field('about_section_heading'); ?></div>
-            <div class="sec-hdr dark-grey lg mt-lg-1 js-anime fadeInLeft"><?= get_field('about_section_caption'); ?></div>
-            <div class="sec-text js-anime fadeInLeft mt-lg-1">
+            <div class="sec-hdr dark-grey lg mt-lg-1 mt-1 js-anime fadeInLeft"><?= get_field('about_section_caption'); ?></div>
+            <div class="sec-text js-anime fadeInLeft mt-lg-1 mt-1">
                 <?= get_field('about_section_preamble'); ?>
             </div>
             <div class="btn-hld js-anime fadeInLeft mt-lg-2">
@@ -96,24 +95,9 @@
 </section>
 
 <!-- Services section -->
-<section class="pad-x pb-lg-5 bkg-light">
+<section class="pad-x pb-lg-5 pb-4 bkg-light">
     <div class="inner border-divider">
-        <!-- <div class="section-hdr sm"><?= get_field('services_section_heading'); ?></div> -->
-        <!-- <div class="row justify-content-between">
-            <div class="col-lg-5">
-                <div class="sec-hdr primary lg mt-lg-1"><?= get_field('services_section_heading'); ?></div>
-                <div class="sec-text">
-                    <?= get_field('services_section_preamble'); ?>
-                </div>
-            </div>
-            <div class="col-lg-5 d-flex align-items-end">
-                <div class="btn-hld mt-lg-2">
-                    <a href="<?= get_field('services_section_cta')['url']; ?>" class="btn primary bold lg"><?= get_field('services_section_cta')['title']; ?></a>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="services-wrap mt-lg-2">
+        <div class="services-wrap mt-lg-2 mt-2">
             <?php
                 // Create query
                 $query_args = array(
@@ -206,13 +190,13 @@
 </section>
 
 <!-- Projects section -->
-<section class="pad-x py-lg-4">
+<section class="pad-x mt-lg-4 mt-3">
     <div class="inner border-divider">
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="sec-hdr primary lg mt-lg-1 js-anime fadeInLeft"><?= get_field('projects_section_heading'); ?></div>
             </div>
-            <div class="col-lg-5 d-flex justify-content-end">
+            <div class="col-lg-5 d-flex mt-lg-0 mt-1 justify-content-lg-end">
                 <div class="btn-hld mt-lg-2">
                     <a href="<?= get_field('projects_section_cta')['url']; ?>" class="btn primary bold lg"><?= get_field('projects_section_cta')['title']; ?></a>
                 </div>
@@ -259,12 +243,12 @@
 </section>
 
 <!-- News Section -->
-<section class="pad-x mt-lg-3 mt-2 pb-lg-5 pb-4">
+<section class="pad-x mt-lg-3 mt-0 pb-lg-5 pb-4">
     <div class="row justify-content-between align-items-end">
         <div class="col-lg-8">
             <div class="sec-hdr primary lg mb-lg-1 js-anime fadeInLeft"><?= get_field('news_section_heading'); ?></div>
         </div>
-        <div class="col-lg-3 d-flex justify-content-end">
+        <div class="col-lg-3 d-flex justify-content-lg-end">
             <!-- <img class="only-desktop" src="<?= get_field('news_section_image'); ?>" alt="" /> -->
             <div class="btn-hld mt-lg-2 mt-2">
                 <a href="<?= get_field('news_section_link')['url']; ?>" class="btn bold primary lg">
