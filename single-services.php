@@ -378,7 +378,7 @@ get_header(); ?>
 
     <section class="justify-content-center pad-x mt-lg-2 mt-2 pb-lg-4">
         <div class="sec-hdr md primary text-center">Other Services</div>
-        <div class="services-wrap pad-x">
+        <div class="services-wrap">
             <?php
                 // Create query
                 $query_args = array(

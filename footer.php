@@ -14,7 +14,7 @@
 
 <footer id="colophon" class="footer site-footer bg-light">
 
-    <section class="footer pad-x">
+    <section class="footer pad-x pt-lg-3 pt-0">
         <div class="footer-cont py-lg-2 py-2">
 
             <div class="row justify-content-between">

@@ -1827,9 +1827,13 @@
 
 .projects-wrap {
     position: relative;
-    padding: 2rem 0;
+    padding: 0 0 3rem;
     //overflow: hidden;
     // border-top: 1px solid $border-1;
+
+    @include sbx-media-min(md) {
+        padding: 2rem 0;
+    }
 
     .projects-carousel, .projects-archive {
 
@@ -2087,8 +2091,13 @@
         gap: 2.5rem 0;
 
         .col-hld {
-            width: 48%;
+            width: 100%;
             height: 35vh;
+
+            @include sbx-media-min(md) {
+                width: 48%;
+            }
+        
         }
     }
 

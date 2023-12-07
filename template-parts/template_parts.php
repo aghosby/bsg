@@ -111,7 +111,7 @@ function careers_card()
                     $termsCat = get_the_terms($post->ID, 'career-categories' );
                     $termsTag = get_the_terms($post->ID, 'career-tags' );
                 ?>
-                <div class="header">
+                <div class="header justify-content-lg-between">
                     <div class="sec-hdr rg dark"><?= the_title(); ?></div>
                     <!-- <div class="dept"><?= $termsCat[0]->name; ?></div> -->
                     <div class="action">Job Details <i class="fas fa-chevron-right"></i></div>

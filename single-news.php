@@ -56,20 +56,21 @@ get_header(); ?>
 
                 <div class="col-lg-12 mt-lg-5 mt-3">
                     <div class="sec-hdr md primary text-center mb-lg-2 mb-2">Other News</div>
-                    <div class="home news-wrap md row justify-content-center align-items-start">
+                    <div class="news-wrap md row justify-content-center align-items-start">
 
                     <?php
                         // Create query
                         $query_args = array(
                             'post_type' => 'news',
-                            'posts_per_page' => 3,
+                            'posts_per_page' => 2,
                             'post__not_in' => array( $post->ID )
                         );
 
                         $query = new WP_Query($query_args); 
 
                     ?>
-                        
+
+
                     <!-- Start posts loop -->
                         <?php if ($query->have_posts()) : ?>
                             <?php while ($query->have_posts()) : $query->the_post();?>
@@ -78,6 +79,7 @@ get_header(); ?>
                             <?php endwhile; wp_reset_query(); ?>
                         <?php endif; ?>
                     <!-- End posts loop -->
+
                 
                 </div>
                 </div>

@@ -15917,7 +15917,13 @@ header .hdr .hdr-actions.menu-icon .menu-burger .burger::after {
 
 .projects-wrap {
   position: relative;
-  padding: 2rem 0;
+  padding: 0 0 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-wrap {
+    padding: 2rem 0;
+  }
 }
 
 .projects-wrap .projects-carousel .slick-list, .projects-wrap .projects-archive .slick-list {
@@ -16187,8 +16193,14 @@ header .hdr .hdr-actions.menu-icon .menu-burger .burger::after {
 }
 
 .projects-wrap .projects-archive .col-hld {
-  width: 48%;
+  width: 100%;
   height: 35vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-wrap .projects-archive .col-hld {
+    width: 48%;
+  }
 }
 
 .projects-wrap .btn-hld {

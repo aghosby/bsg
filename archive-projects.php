@@ -29,9 +29,9 @@
     <!-- Projects loop + Inject AJAX response -->
     <?php if (have_posts()) : ?>
 
-        <section class="d-flex justify-content-between">
+        <section class="row justify-content-between">
 
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-12">
                 <div class="projects-wrap md pt-lg-0 pe-lg-3 pe-0" id="response">
 
                     <div class="projects-archive">
